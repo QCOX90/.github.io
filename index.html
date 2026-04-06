@@ -225,18 +225,19 @@ body {
       border: 1px solid var(--border);
     }
 
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
+  .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
 
-    .feature-box {
-      border: 1px solid #c5d4e3;
-      border-radius: 18px;
-      background: #ffffff;
-      padding: 18px;
-    }
+.feature-box {
+  border: 1px solid #c5d4e3;
+  border-radius: 18px;
+  background: #ffffff;
+  padding: 18px;
+  min-height: 160px;
+}
 
     .feature-box strong {
       display: block;
@@ -542,14 +543,11 @@ body {
 </ul>
             </div>
             <div class="feature-box">
-              <strong>Easy to find</strong>
-              <span>Location and contact details are front and center.</span>
-            </div>
+  <strong>Open Hours</strong>
+  <span>Monday-Friday<br />9:00 AM-5:00 PM</span>
+</div>
             <div class="feature-box">
-              <strong>Information first</strong>
-              <span>Built to clearly share the clinic details discussed so far.</span>
-            </div>
-          </div>
+         </div>
         </div>
 
         <aside class="card hero-side">
