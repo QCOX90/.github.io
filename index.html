@@ -21,7 +21,7 @@
   width: 100%;
   height: 260px;
   object-fit: cover;
-  object-position: top; /* THIS is the fix */
+  object-position: top;
 }
     
     :root {
@@ -50,7 +50,7 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
-  background: #ffffff; /* pure white */
+  background: #ffffff;
   line-height: 1.6;
 }
 
@@ -137,7 +137,7 @@ body {
 
    .hero {
   padding: 68px 0 36px;
-  background: #f8fbff; /* very light blue section */
+  background: #f8fbff;
 }
 
     .hero-grid {
@@ -262,7 +262,7 @@ body {
 .logo-panel {
   display: flex;
   flex-direction: column;
-  align-items: center; /* THIS centers everything */
+  align-items: center;
   text-align: center;
   padding: 10px 0 20px;
 }
@@ -270,7 +270,7 @@ body {
 .logo-panel img {
   width: 180px;
   display: block;
-  margin: 0 auto; /* forces perfect centering */
+  margin: 0 auto;
   background: #3f87d6;
   padding: 20px;
   border-radius: 20px;
@@ -384,29 +384,112 @@ body {
       margin-bottom: 2px;
     }
 
-    .owner-box {
+    .owner-modern {
       display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 22px;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
       align-items: center;
-      border: 1px solid #c5d4e3;
-      border-radius: 22px;
-      padding: 24px;
-      background: #ffffff;
     }
 
-    .owner-badge {
-      width: 120px;
-      height: 120px;
-      border-radius: 24px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    .owner-image-wrap {
+      position: relative;
+    }
+
+    .owner-image img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      border-radius: 26px;
+      display: block;
+      background: #dbe6f2;
+      box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+    }
+
+    .owner-badge-modern {
+      position: absolute;
+      right: -10px;
+      bottom: -16px;
+      background: #2da287;
       color: white;
+      border-radius: 18px;
+      padding: 18px 22px;
+      box-shadow: 0 14px 30px rgba(45,162,135,0.25);
+    }
+
+    .owner-badge-modern strong {
+      display: block;
+      font-size: 40px;
+      line-height: 1;
+    }
+
+    .owner-badge-modern span {
+      display: block;
+      margin-top: 4px;
+      font-size: 16px;
+    }
+
+    .owner-content h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.08;
+      margin-bottom: 18px;
+      color: #17324d;
+    }
+
+    .owner-tag {
+      display: inline-block;
+      padding: 8px 14px;
+      background: #e5f5ee;
+      color: #2f8f6b;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .owner-content p {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .owner-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .owner-highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .owner-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 40px;
-      font-weight: 700;
-      box-shadow: var(--shadow);
+      background: #f5ecdf;
+      color: #d2872f;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .owner-highlight strong {
+      display: block;
+      color: #17324d;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .owner-highlight span {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.4;
     }
 
     .cta {
@@ -443,7 +526,8 @@ body {
       .grid-3,
       .grid-2,
       .feature-grid,
-      .owner-box {
+      .owner-modern,
+      .owner-highlights {
         grid-template-columns: 1fr;
       }
 
@@ -459,10 +543,13 @@ body {
         align-items: flex-start;
       }
 
-      .owner-badge {
-        width: 90px;
-        height: 90px;
-        font-size: 30px;
+      .owner-image img {
+        height: 420px;
+      }
+
+      .owner-badge-modern {
+        right: 16px;
+        bottom: 16px;
       }
     }
 
@@ -557,12 +644,10 @@ body {
   <p>Restoring Motion, Restoring Joy</p>
 </div>
 
-<!-- IMAGE GOES HERE -->
 <div class="clinic-image">
   <img src="clinic.jpg" alt="Smiley Physical Therapy location" />
 </div>
 
-<!-- ADDRESS ONLY -->
 <div class="info-stack">
   <div class="info-item">
     <div class="info-label">Address</div>
@@ -597,26 +682,63 @@ body {
     <section id="owner">
       <div class="container">
         <div class="card section-card">
-          <h2 class="section-title">Meet the Owner</h2>
+          <div class="owner-modern">
 
-          <div class="owner-box">
-            <div class="owner-badge">SS</div>
+            <div class="owner-image-wrap">
+              <div class="owner-image">
+                <img src="owner-placeholder.png" alt="Susan Smiley placeholder photo" />
+              </div>
 
-            <div>
-              <h3 style="margin-bottom: 10px;">Susan Smiley, MPT</h3>
-              <p class="section-copy">
-                Susan Smiley is the owner of Smiley Physical Therapy and a physical therapist
-                serving the Olive Branch community.
-              </p>
-              <p class="section-copy">
-                She is dedicated to helping patients improve mobility, reduce pain, and move
-                forward with confidence through attentive, personalized care.
-              </p>
-              <p class="section-copy" style="margin-bottom: 0;">
-                Her clinic is built around a welcoming, supportive environment where patients
-                can feel comfortable asking questions and focusing on recovery.
-              </p>
+              <div class="owner-badge-modern">
+                <strong>20+</strong>
+                <span>Years of Experience</span>
+              </div>
             </div>
+
+            <div class="owner-content">
+              <div class="owner-tag">Meet the Owner</div>
+
+              <h2>Mrs. Susan Elizabeth Smiley</h2>
+
+              <p>
+                With a passion for helping people move and feel their best, Susan founded
+                Smiley Physical Therapy to bring compassionate, high-quality rehabilitation
+                care to the Olive Branch community.
+              </p>
+
+              <p>
+                As a licensed physical therapist and clinic owner, Susan is dedicated to
+                personalized treatment plans that help restore function, reduce pain, and
+                improve quality of life.
+              </p>
+
+              <div class="owner-highlights">
+                <div class="owner-highlight">
+                  <div class="owner-icon">❤</div>
+                  <div>
+                    <strong>Patient-First Care</strong>
+                    <span>Every plan is personal</span>
+                  </div>
+                </div>
+
+                <div class="owner-highlight">
+                  <div class="owner-icon">★</div>
+                  <div>
+                    <strong>Licensed & Certified</strong>
+                    <span>Professional care</span>
+                  </div>
+                </div>
+
+                <div class="owner-highlight">
+                  <div class="owner-icon">👥</div>
+                  <div>
+                    <strong>Community Focused</strong>
+                    <span>Serving Olive Branch</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
