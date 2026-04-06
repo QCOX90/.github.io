@@ -9,6 +9,20 @@
     content="Smiley Physical Therapy in Olive Branch, Mississippi. Find location and contact information and learn more about owner Susan Smiley."
   />
   <style>
+
+    .services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.services-grid .service-card:nth-child(4) {
+  grid-column: 1 / 2;
+}
+
+.services-grid .service-card:nth-child(5) {
+  grid-column: 2 / 3;
+}
     
 .clinic-image {
   margin: 20px 0;
