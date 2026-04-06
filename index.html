@@ -9,6 +9,20 @@
     content="Smiley Physical Therapy in Olive Branch, Mississippi. Find location and contact information and learn more about owner Susan Smiley."
   />
   <style>
+    
+.clinic-image {
+  margin: 20px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.clinic-image img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+    
     :root {
       --primary: #6da9d8;
       --primary-dark: #4d87b5;
@@ -527,32 +541,26 @@ body {
 
         <aside class="card hero-side">
           <div class="logo-panel">
-            <img src="logo.png" alt="Smiley Physical Therapy logo" />
-            <h3>Smiley Physical Therapy</h3>
-            <p>Restoring Motion, Restoring Joy</p>
-          </div>
+  <img src="logo.png" alt="Smiley Physical Therapy logo" />
+  <h3>Smiley Physical Therapy</h3>
+  <p>Restoring Motion, Restoring Joy</p>
+</div>
 
-          <div class="info-stack">
-            <div class="info-item">
-              <div class="info-label">Address</div>
-              <div class="info-value">
-                6901 Highway 305 N # F<br />
-                Olive Branch, MS 38654
-              </div>
-            </div>
+<!-- IMAGE GOES HERE -->
+<div class="clinic-image">
+  <img src="clinic.jpg" alt="Smiley Physical Therapy location" />
+</div>
 
-            <div class="info-item">
-              <div class="info-label">Phone</div>
-              <div class="info-value">
-                <a href="tel:16628952332">662-895-2332</a>
-              </div>
-            </div>
-
-            <div class="info-item">
-              <div class="info-label">Fax</div>
-              <div class="info-value">662-895-2360</div>
-            </div>
-          </div>
+<!-- ADDRESS ONLY -->
+<div class="info-stack">
+  <div class="info-item">
+    <div class="info-label">Address</div>
+    <div class="info-value">
+      6901 Highway 305 N # F<br />
+      Olive Branch, MS 38654
+    </div>
+  </div>
+</div>
         </aside>
       </div>
     </section>
