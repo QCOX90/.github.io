@@ -251,6 +251,33 @@ body {
       color: var(--muted);
     }
 
+    .hours-box {
+      min-height: auto;
+    }
+
+    .hours-grid {
+      margin-top: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 12px;
+      background: #f7fbff;
+      border: 1px solid #dbe7f2;
+      border-radius: 12px;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .hours-row span:first-child {
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
     .hero-side {
       padding: 28px;
       display: flex;
@@ -502,18 +529,6 @@ body {
       margin-bottom: 34px;
     }
 
-    .services-tag {
-      display: inline-block;
-      padding: 8px 14px;
-      background: #e5f5ee;
-      color: #2f8f6b;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 14px;
-      letter-spacing: 0.02em;
-    }
-
     .services-header h2 {
       font-size: clamp(32px, 4vw, 52px);
       line-height: 1.08;
@@ -654,6 +669,11 @@ body {
       .btn {
         width: 100%;
       }
+
+      .hours-row {
+        flex-direction: column;
+        gap: 4px;
+      }
     }
   </style>
 </head>
@@ -702,9 +722,16 @@ body {
           </div>
 
          <div class="feature-grid">
-  <div class="feature-box">
+  <div class="feature-box hours-box">
     <strong>Open Hours</strong>
-    <span>Monday-Friday<br />9:00 AM-5:00 PM</span>
+
+    <div class="hours-grid">
+      <div class="hours-row"><span>Monday</span><span>9:00 AM - 5:00 PM</span></div>
+      <div class="hours-row"><span>Tuesday</span><span>9:00 AM - 5:00 PM</span></div>
+      <div class="hours-row"><span>Wednesday</span><span>9:00 AM - 5:00 PM</span></div>
+      <div class="hours-row"><span>Thursday</span><span>9:00 AM - 5:00 PM</span></div>
+      <div class="hours-row"><span>Friday</span><span>9:00 AM - 5:00 PM</span></div>
+    </div>
   </div>
 </div>
 
@@ -737,49 +764,42 @@ body {
     <section id="services" class="services-section">
       <div class="container">
         <div class="services-header">
-          <div class="services-tag">WHAT WE OFFER</div>
-          <h2>Our Specialized Services</h2>
+          <h2>Our Services</h2>
           <p>
-            Smiley Physical Therapy offers personalized care focused on improving movement,
-            reducing pain, restoring function, and supporting long-term mobility and wellness.
+            Smiley Physical Therapy offers personalized care focused on improving movement, reducing
+            pain, restoring function, and supporting long-term mobility and wellness.
           </p>
         </div>
 
         <div class="services-grid">
           <div class="service-card">
             <div class="service-icon">🩺</div>
-            <h3>Movement Dysfunction Care</h3>
-            <p>Diagnosis and management of movement dysfunction to help patients move more comfortably and confidently.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">💪</div>
-            <h3>Functional Improvement</h3>
-            <p>Programs focused on enhancing physical and functional abilities for everyday life and recovery.</p>
+            <h3>Injury &amp; Post-Surgery Rehabilitation</h3>
+            <p>Personalized rehabilitation care to help restore strength, mobility, and confidence after injury or surgery.</p>
           </div>
 
           <div class="service-card">
             <div class="service-icon">⚡</div>
-            <h3>Pain Relief & Function</h3>
-            <p>Treatment plans designed to reduce pain and restore function through personalized rehabilitation care.</p>
+            <h3>Pain Relief and Mobility Improvement</h3>
+            <p>Treatment plans focused on reducing pain, improving movement, and helping patients return to daily life more comfortably.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">📋</div>
+            <h3>Personalized Therapy Plans</h3>
+            <p>Care tailored to each patient’s individual needs, goals, and recovery process.</p>
           </div>
 
           <div class="service-card">
             <div class="service-icon">🛡️</div>
-            <h3>Rehabilitation Support</h3>
-            <p>Preventing disability through rehabilitation and guided therapy tailored to individual patient needs.</p>
+            <h3>Chronic Condition Management</h3>
+            <p>Support for long-term conditions affecting mobility and function, with a focus on improving quality of life.</p>
           </div>
 
           <div class="service-card">
             <div class="service-icon">👣</div>
-            <h3>Mobility & Wellness</h3>
-            <p>Programs that promote mobility and wellness to maintain or improve overall physical health.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">🏥</div>
-            <h3>Comprehensive Therapy</h3>
-            <p>Care for post-surgical recovery, injury rehabilitation, and chronic condition management with the goal of restoring independence and quality of life.</p>
+            <h3>Strength and Wellness Programs</h3>
+            <p>Programs designed to maintain or improve physical health, balance, strength, and overall wellness.</p>
           </div>
         </div>
       </div>
